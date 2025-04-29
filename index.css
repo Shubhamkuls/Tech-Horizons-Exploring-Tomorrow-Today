@@ -1,0 +1,268 @@
+*{
+    margin: 0px;
+    padding: 0; /*removes default margin and padding for all elememts */
+    box-sizing: border-box; /*ensure margin and padding do not effect element width and height */
+    font-family:sans-serif,Arial, Helvetica;
+    background-color: #f4e6e6;
+}
+
+/* Header styling */
+header{
+    text-align: center;
+    padding: 8px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-bottom: 2px black solid;
+    position: sticky;
+    top:0;
+    z-index: 1; /*ensures headers stays on the top */
+}
+header h1{
+    font-size: 35px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 800;
+    letter-spacing: 2px;
+    word-spacing: 10px;
+}
+
+header nav{
+    margin-top: 5px;
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+.nav1{
+    text-decoration: none;
+    color: black;
+}
+.nav1:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    color: red;
+}
+
+#home {
+    padding: 20px;
+    border-bottom: 2px black solid;
+}
+#home h2{
+    padding: 15px;
+    letter-spacing: 0.5px;
+    word-spacing: 1px;
+    margin-bottom: 10px;
+}
+#home p{
+    padding: 15px;
+    word-spacing: 1.5px;
+    letter-spacing: 0.5px;
+    text-align: justify;
+    line-height: 30px;
+}
+.heading{
+    padding-top: 60px;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    font-size: 28px;
+}
+.section-grid{ 
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 15px;
+        padding: 20px;
+        max-width: 100%; /*prevent the grid from overflowing outside the screen */
+        margin: auto;
+        width: 100vw; /*takes 100% of viewport width */
+        box-sizing: border-box;/* Ensures that padding doesn't increase total width*/
+        /*without max-width and width some columns are going out of screen and it ends up scrolling*/
+    }
+
+.article-heading{
+    padding: 20px;
+    background-color: white;
+    
+}
+.lists{
+    padding: 10px;
+    word-spacing: 1px;
+    line-height: 26px;
+    background-color: white;
+}
+.lists li{
+    margin-bottom: 10px;
+    background-color: white;
+}
+.grid-article{
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+.grid-article:hover{
+    transform: translateY(-10px);
+}
+.grid-article img{
+    border: 5px solid rgba(250, 249, 249, 0);
+    width:100%;
+    border-radius: 10px;
+    text-align: center;
+}
+.grid-article video{
+    width:100%;
+    border-radius: 10%;
+    margin-top: 10px;
+}
+.article-para{
+    padding: 10px;
+    word-spacing: 1px;
+    line-height: 26px;
+    background-color: white;
+}
+/* About me */
+#about{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    gap:30px;
+    max-width: 80%;
+    margin: 50px;
+    padding: 40px;
+}
+#about h2{
+    text-align: center;
+    grid-column: span 2;/*Makes this element take up two columns in the grid*/
+}
+#about p{
+    text-align: justify;
+    word-spacing: 1px;
+    line-height: 1.7;
+    font-weight: 500;
+}
+#about img{
+    width:100%;
+    max-width: 280px;
+    height: auto;
+    border-radius: 12px;
+}
+#about img:hover {
+    transform: scale(1.05);
+}
+
+/* Contact me */
+#contact{
+    padding:20px;
+    margin: 30px;
+}
+#contact h2{
+    text-align: center;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+#contact p{
+    padding: 10px;
+    word-spacing: 0.5px;
+    font-size: 16px;
+}
+#contact ul{
+    padding: 10px;
+}
+#contact ul li{
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+#contact a{
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+}
+#contact a:hover{
+    text-decoration: underline;
+    color: blue;
+}
+#contact form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#contact input, #contact textarea{
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    font-size: 16px;
+}
+#contact textarea{
+    resize: none;
+}
+#contact fieldset{
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    border: 2px solid black;
+    margin: 10px;
+    border-radius: 10px;
+}
+#contact input[type="radio"],#contact input[type="checkbox"]{
+    
+    margin-top: 20px;
+    padding-top: 20px;
+}
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 70%;
+    max-width: 800px;
+    margin-left: 200px;
+    margin-top: 10px;
+}
+#contact button {
+    width: 100%;
+    max-width: 150px;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: #007bff;
+    color: white;
+    font-size: 18px;
+}
+#contact input[type="file"] {
+    border: none;
+    padding: 5px;
+}
+/* footer section */
+footer {
+    
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.footer-links {
+    margin: 10px 0;
+}
+
+.footer-links a {
+    text-decoration: none;
+    margin: 10px;
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-icons {
+    margin-top: 10px;
+}
+
+
+.footer-links:hover {
+    transform: scale(1.2);
+}
